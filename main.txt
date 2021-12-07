@@ -1,0 +1,79 @@
+from tkinter import *
+from PIL import Image
+from PIL import ImageTk
+def base():
+  from tkinter import Tk
+  import tkinter as tk
+  def default_player():
+    from default import MusicPlayer
+    # Passing Root to MusicPlayer Class
+    MusicPlayer(root)
+  def horror_player():
+    from horror import MusicPlayer
+    # Passing Root to MusicPlayer Class
+    MusicPlayer(root)
+  def cute_player():
+    from cute import MusicPlayer
+    # Passing Root to MusicPlayer Class
+    MusicPlayer(root)
+  def summer_player():
+    from summer import MusicPlayer
+    # Passing Root to MusicPlayer Class
+    MusicPlayer(root)
+  def sea_player():
+    from sea import MusicPlayer
+    # Passing Root to MusicPlayer Class
+    MusicPlayer(root)
+  def alien_player():
+    from alien import MusicPlayer
+    # Passing Root to MusicPlayer Class
+    MusicPlayer(root)
+  def pastel_player():
+    from pastel import MusicPlayer
+    # Passing Root to MusicPlayer Class
+    MusicPlayer(root)
+  def winter_player():
+    from winter import MusicPlayer
+    # Passing Root to MusicPlayer Class
+    MusicPlayer(root)
+  # Creating TK Container
+  root=Tk()
+  #
+  root.title("SELECT THEME")
+  #icon
+  root.iconbitmap(r'n1.ico')
+  # Window Geometry
+  root.geometry("250x300")
+  # Disable resizing
+  #root.resizable(False,False)
+  # Frame for radio buttons
+  alien=PhotoImage(file='E:/NOLAE MUSIC PLAYER/alien.png')
+  summer=PhotoImage(file='E:/NOLAE MUSIC PLAYER/summer.png')
+  pastel=PhotoImage(file='E:/NOLAE MUSIC PLAYER/pastel.png')
+  cute=PhotoImage(file='E:/NOLAE MUSIC PLAYER/cute.png')
+  sea=PhotoImage(file='E:/NOLAE MUSIC PLAYER/sea.png')
+  winter=PhotoImage(file='E:/NOLAE MUSIC PLAYER/winter.png')
+  dark=PhotoImage(file='E:/NOLAE MUSIC PLAYER/dark.png')
+  blood=PhotoImage(file='E:/NOLAE MUSIC PLAYER/blood.png')
+  #add png
+  #nolae=Image.open("n1png.png")
+  #nolae.resize((136,109),Image.ANTIALIAS)
+  #canvas= Canvas(root, width= 300, height= 400, bg="#e1e1e1")
+  #canvas.create_image(136,109, image=nolae)
+  #create_image(50, 10, image=gif1, anchor=NW)
+  #canvas.place(x=0, y=0, height=300, width=250)
+  
+  # buttons for themes
+  buttonframe = LabelFrame(root,text="Choose A Theme",bg="lavender",fg="black",bd=5,relief=FLAT)
+  buttonframe.place(x=0,y=0,width=250,height=300)
+  
+  default_btn = Button(buttonframe,image=dark,command=default_player,relief=FLAT, activebackground="#e2e5de").grid(row=0,column=1,padx=10,pady=15)
+  horror_btn = Button(buttonframe,image=blood,command=horror_player ,relief=FLAT, activebackground="#e2e5de").grid(row=0,column=10,padx=10,pady=15)
+  cute_btn = Button(buttonframe,image=cute,command=cute_player,relief=FLAT, activebackground="#e2e5de").grid(row=3,column=1,padx=10,pady=15)
+  summer_btn = Button(buttonframe,image=summer,command=summer_player,relief=FLAT, activebackground="#e2e5de").grid(row=3,column=10,padx=10,pady=15)
+  sea_btn = Button(buttonframe,image=sea,command=sea_player,relief=FLAT, activebackground="#e2e5de").grid(row=5,column=1,padx=10,pady=15)
+  alien_btn = Button(buttonframe,image=alien ,command=alien_player,relief=FLAT, activebackground="#e2e5de").grid(row=5,column=10,padx=10,pady=15)
+  pastel_btn = Button(buttonframe,image=pastel,command=pastel_player,relief=FLAT, activebackground="#e2e5de").grid(row=7,column=1,padx=10,pady=15)
+  winter_btn = Button(buttonframe,image=winter,command=winter_player,relief=FLAT, activebackground="#e2e5de").grid(row=7,column=10,padx=10,pady=15)
+  # Root Window Looping
+  root.mainloop()
